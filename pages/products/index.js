@@ -6,7 +6,7 @@ const fetcher = async (url) => {
   return data;
 };
 
-const AllListingsPage = () => {
+export default function AllListingsPage() {
   const { data, error } = useSWR('/api/products', fetcher);
 
   if (error) {
@@ -29,5 +29,3 @@ const AllListingsPage = () => {
     </div>
   );
 };
-
-export default AllListingsPage;
